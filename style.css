@@ -1,0 +1,121 @@
+/* PRESETS  ------------------------------------------------------------------- */
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+
+/* STRUCTURE  ----------------------------------------------------------------- */
+
+header, main, footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+}
+
+header {
+    box-shadow: 2px 3px 5px 0px #D0D4DA;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cardSection {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-columns: 1fr;
+}
+
+
+
+
+
+
+
+/* STYLING  ----------------------------------------------------------------------- */
+
+.addBookButton, .cardSection {
+    margin: 2em;
+}
+
+.addBookButton {
+    height: 5em;
+}
+
+.cardSection {
+    gap: 2em;
+    padding: 2em;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    position: relative;	
+    box-shadow: 2px 3px 5px 0px #D0D4DA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#formPop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 2em;
+    max-width: 50vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 30%;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 0px #D0D4DA;
+    animation: fadeIn 0.65s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fade in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
