@@ -1,4 +1,9 @@
 const myLibrary = [];
+const form = document.querySelector('.form');
+const formPop = document.querySelector('.formPop');
+const cardSection = document.querySelector('.cardSection');
+const button = document.querySelector('.addButton');
+const submitButton = document.querySelector('.submit');
 
 //constructor
 function Book (title, author, pages) {
@@ -13,7 +18,7 @@ function Book (title, author, pages) {
 
 
 //take user’s input and store the new book objects into the array.
-function addBookToLibrary () {
+function addBookToLibrary() {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
@@ -21,11 +26,14 @@ function addBookToLibrary () {
     
     const book1 = new Book(title, author, pages);
     myLibrary.push(book1.info());
+    displayBooks();
 
 }
 
 
 //adding an event listener to the button so the user can fill a form with the books properties
+
+/*
 function openForm() {
     document.getElementById('formPop').style.display = 'flex';
     document.getElementById('formPop').style.flexDirection = 'column';
@@ -43,19 +51,26 @@ function closeForm() {
     addBookToLibrary();
     displayBooks();
 }
-const button = document.querySelector('.addButton');
-const submitButton = document.querySelector('.submit');
+*/
 
 
-    button.addEventListener('click', () => {
-        openForm();
-    });
+//open form
+button.addEventListener('click', () => {
+        formPop.classList.add('active');
+        document.getElementById('body').style.backgroundColor = '#787778';
+        document.getElementById('body').style.opacity = '0.6';
+        cardSection.innerHTML = '';
+});
     
    
 
-
+//close form
 submitButton.addEventListener('click', () => {
-    closeForm();
+    formPop.classList.remove('active');
+    document.getElementById('body').style.backgroundColor = '#ffffff';
+    document.getElementById('body').style.opacity = '1';
+    addBookToLibrary();
+    form.reset();
 });
 
 
@@ -63,15 +78,11 @@ submitButton.addEventListener('click', () => {
 
 
 
-
-    const cardSection = document.querySelector('.cardSection');
-        const card = document.createElement('div');
 //function that displays the array elements into the grid
 function displayBooks () {
     for(let i = 0; i < myLibrary.length; i++) {
-        cardSection.innerHTML = '';
+        const card = document.createElement('div');
         card.classList.add('card');
-
         card.textContent = myLibrary[i];
         cardSection.appendChild(card);
     }

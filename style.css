@@ -85,7 +85,7 @@ main {
     align-items: start;
 }
 
-#formPop {
+.formPop {
     display: none;
     justify-content: center;
     align-items: center;
@@ -104,6 +104,11 @@ main {
     border-radius: 10px;
     box-shadow: 2px 3px 5px 0px #D0D4DA;
     animation: fadeIn 0.65s;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
