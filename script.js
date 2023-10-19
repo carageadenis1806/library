@@ -4,7 +4,9 @@ const formPop = document.querySelector('.formPop');
 const cardSection = document.querySelector('.cardSection');
 const button = document.querySelector('.addButton');
 const submitButton = document.querySelector('.submit');
-
+const header = document.querySelector('.header');
+const main = document.querySelector('.main');
+const footer = document.querySelector('.footer');
 //constructor
 function Book (title, author, pages) {
     this.title = title;
@@ -31,34 +33,13 @@ function addBookToLibrary() {
 }
 
 
-//adding an event listener to the button so the user can fill a form with the books properties
-
-/*
-function openForm() {
-    document.getElementById('formPop').style.display = 'flex';
-    document.getElementById('formPop').style.flexDirection = 'column';
-    document.getElementById('body').style.backgroundColor = '#787778';
-    document.getElementById('body').style.opacity = '0.6';
-    document.getElementById('cardSection').style.display = 'none';
-    
-}
-
-function closeForm() {
-    document.getElementById('formPop').style.display = 'none';
-    document.getElementById('body').style.backgroundColor = '#ffffff';
-    document.getElementById('body').style.opacity = '1';
-    document.getElementById('cardSection').style.display = 'grid';
-    addBookToLibrary();
-    displayBooks();
-}
-*/
-
-
 //open form
 button.addEventListener('click', () => {
         formPop.classList.add('active');
-        document.getElementById('body').style.backgroundColor = '#787778';
-        document.getElementById('body').style.opacity = '0.6';
+        button.classList.add('buttonRemove');
+        header.classList.add('activeBody');
+        main.classList.add('activeBody');
+        footer.classList.add('activeBody');
         cardSection.innerHTML = '';
 });
     
@@ -67,8 +48,10 @@ button.addEventListener('click', () => {
 //close form
 submitButton.addEventListener('click', () => {
     formPop.classList.remove('active');
-    document.getElementById('body').style.backgroundColor = '#ffffff';
-    document.getElementById('body').style.opacity = '1';
+    button.classList.remove('buttonRemove');
+    header.classList.remove('activeBody');
+    main.classList.remove('activeBody');
+    footer.classList.remove('activeBody');
     addBookToLibrary();
     form.reset();
 });
