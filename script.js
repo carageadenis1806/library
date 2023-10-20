@@ -13,8 +13,10 @@ function Book (title, author, pages) {
     this.author = author;
     this.pages = pages;
     this.info = function () {
-        let information = title + ' / ' + author + ' / ' + pages + '. ';
+          
+        let information = title + ' ** '+ author + ' ** ' + pages + '. ';
         return information;
+        
     }
 }
 
@@ -66,7 +68,10 @@ function displayBooks () {
     for(let i = 0; i < myLibrary.length; i++) {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.textContent = myLibrary[i];
+        const p = document.createElement('p');
+        p.textContent = myLibrary[i];
+        p.classList.add('p')
+        card.appendChild(p);
         cardSection.appendChild(card);
     }
     
