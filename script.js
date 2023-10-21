@@ -7,6 +7,8 @@ const submitButton = document.querySelector('.submit');
 const header = document.querySelector('.header');
 const main = document.querySelector('.main');
 const footer = document.querySelector('.footer');
+
+
 //constructor
 function Book (title, author, pages) {
     this.title = title;
@@ -35,6 +37,7 @@ function addBookToLibrary() {
 }
 
 
+
 //open form
 button.addEventListener('click', () => {
         formPop.classList.add('active');
@@ -58,21 +61,47 @@ submitButton.addEventListener('click', () => {
     form.reset();
 });
 
+/*
+removeButton.addEventListener('click', () => {
+    card.remove();
+    p.remove();
+})
+*/
 
+function giveIndex(element) {
+   let index = 0;
+   for(i = 0; i < 0; i++) {
+    index++;
+    element.setAttribute('data',index);
+   }
 
-
-
+}
 
 //function that displays the array elements into the grid
 function displayBooks () {
+
     for(let i = 0; i < myLibrary.length; i++) {
+        const removeButton = document.createElement('button');
+        const p = document.createElement('p');
         const card = document.createElement('div');
         card.classList.add('card');
-        const p = document.createElement('p');
         p.textContent = myLibrary[i];
-        p.classList.add('p')
+        p.classList.add('p');
+        removeButton.classList.add('remove');
+        removeButton.textContent = 'X';
         card.appendChild(p);
+        card.appendChild(removeButton);
         cardSection.appendChild(card);
+
+        
+        
+        giveIndex(card);
+        removeButton.addEventListener('click', () => {
+            myLibrary.splice(card.getAttribute('data'), 1);
+            card.remove();
+            p.remove();
+        })
+
     }
     
 }

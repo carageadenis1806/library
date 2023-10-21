@@ -279,6 +279,22 @@ input {
     
 }
 
+.remove {
+    font-family: 'Young Serif', serif;
+    font-weight: 900;
+    border: 1px dotted #000;
+    background-color: #eee;
+    color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 2;
+    left: 2;
+    right: 0;
+    border: 2px #eee;
+    border-radius: 150px;
+    margin: 5px;
+}
+
 /*
 @media (min-width: 801px) {
     .cardSection {
