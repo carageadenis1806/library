@@ -1,3 +1,1 @@
-LIBRARY HTML/CSS/JS PROJECT
-
-View live demo: 
+#library
