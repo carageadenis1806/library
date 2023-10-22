@@ -16,7 +16,7 @@ function Book (title, author, pages) {
     this.pages = pages;
     this.info = function () {
           
-        let information = title + ' ** '+ author + ' ** ' + pages + '. ';
+        let information = '// ' + title + ' // '+ author + ' // ' + pages + '. ';
         return information;
         
     }
