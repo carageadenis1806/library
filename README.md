@@ -7,22 +7,22 @@
 		<img src="https://img.shields.io/static/v1?label=&message=Javascript&color=F7DF1E&style=for-the-badge&logo=Javascript&logoColor=black&logoWidth=&labelColor=&link=">
 		<br>
 	</h1>
-	<h3><b><a href="https://carageadenis1806.github.io/library/">View Live Demo</a></b></h3>
+	<h3><b><a href="https://carageadenis1806.github.io/library/" target="_blank">View Live Demo</a></b></h3>
 </div>
 
 
 
 ## Description
 
-This is a book library app created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
+This is a book library app created as part of [TheOdinProject] <a href="https://www.theodinproject.com" target="_blank"> curriculum.
 
-To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-javascript-library)
+To see the assignment details - [Click Here] <a href="https://www.theodinproject.com/lessons/node-path-javascript-library" target="_blank">
 
 ## Built Using
 
--   HTML5 <img src="./readme-assets/html5.svg">
--   CSS3 <img src="./readme-assets/css3.svg">
--   JavaScript <img src="./readme-assets/javascript.svg">
+-   HTML5 
+-   CSS3 
+-   JavaScript 
 
 
 
